@@ -24,3 +24,16 @@ class Guess:
     def correct_answer(self):
         return randint(0, self.set_size)
 
+
+def play_game():
+    game = Guess()
+    correct_answer_received = False
+
+    while correct_answer_received is False:
+        game.guess_number()
+        sleep(2)
+        pass
+
+
+def main():
+    pass
