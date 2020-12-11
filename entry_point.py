@@ -14,7 +14,6 @@ def play_game():
 
 
 def main():
-    print(3)
     play_game()
 
 
