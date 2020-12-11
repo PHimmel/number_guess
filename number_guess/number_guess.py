@@ -21,9 +21,9 @@ class Guess:
 
     def determine_correctness(self):
         if self.guess > self.answer:
-            pass
+            return False
         elif self.guess < self.answer:
-            pass
+            return False
         else:
             return True
 
