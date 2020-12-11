@@ -21,7 +21,12 @@ class Guess:
         return self.determine_correctness()
 
     def determine_correctness(self):
-        pass
+        if self.guess > self.answer:
+            pass
+        elif self.guess < self.answer:
+            pass
+        else:
+            return True
 
     def correct_answer(self):
         return randint(0, self.max_number)
