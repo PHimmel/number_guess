@@ -4,7 +4,7 @@ from number_guess.number_guess import Guess
 
 def play_game():
     game = Guess()
-    game.set_max_size()
+#    game.set_max_size()
     correct_answer_received = False
 
     while correct_answer_received is False:
