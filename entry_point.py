@@ -7,11 +7,17 @@ def play_game():
 #    game.set_max_size()
     answer = False
     while answer is False:
-        evaluation = game.set_guess()
-        print(evaluation)
-        if evaluation == '=':
-            print('You won!')
-            break
+        try:
+            evaluation = game.set_guess()
+            print(evaluation)
+            if evaluation == '=':
+                print('You won!\n')
+                break
+
+        except ValueError:
+            print('Only int values!')
+            continue
+
         sleep(1)
 
 
