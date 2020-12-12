@@ -3,10 +3,12 @@ from random import randint
 
 class Guess:
 
-    def __init__(self, total_guesses=5, max_number=100):
+    def __init__(self, total_guesses=0, max_number=100):
         self.max_number = max_number
         self.total_guesses = total_guesses
         self.guess = None
+        if self.total_guesses == 0:
+            self.set_max_size()
         self.answer = self.correct_answer()
 
     def set_max_size(self):
