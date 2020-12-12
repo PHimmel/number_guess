@@ -10,7 +10,7 @@ def play_game():
         try:
             evaluation = game.set_guess()
             print(evaluation)
-            
+
             if evaluation == '=':
                 print('You won!\n')
                 break
