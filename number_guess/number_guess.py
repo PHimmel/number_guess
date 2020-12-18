@@ -12,7 +12,7 @@ class Guess:
         if self.total_guesses == 0:
             max_number = self.prompt_max_size()
             self.set_max_size(max_number)
-        self.answer = self.correct_answer()
+        self.answer = self.generate_correct_answer()
 
     def prompt_max_size(self):
         user_input = ''
@@ -46,5 +46,5 @@ class Guess:
         else:
             return '='
 
-    def correct_answer(self):
+    def generate_correct_answer(self):
         return randint(0, self.max_number)
