@@ -15,7 +15,17 @@ class Guess:
         self.answer = self.correct_answer()
 
     def prompt_max_size(self):
-        max_number = int(input('What is the total size of the numbers to draw from?\n'))
+        user_input = ''
+
+        while user_input is not int:
+            try:
+                user_input = int(input('Enter a number: '))
+                break
+            except ValueError:
+                print('Only int values!')
+
+        max_number = user_input
+
         return max_number
 
     def set_max_size(self, max_number):
