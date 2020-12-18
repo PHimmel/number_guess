@@ -4,6 +4,7 @@ from number_guess.number_guess import Guess
 
 def play_game():
     game = Guess()
+    game.start()
     answer = False
 
     while answer is False:
@@ -28,4 +29,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
