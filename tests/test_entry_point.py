@@ -1,17 +1,12 @@
 import sys
 sys.path.append(".")
 
-#import mock
-from unittest import mock
-#import module
-#from mock import patch, MagicMock
+from unittest import mockk
 from io import StringIO
 
 import builtins
 from number_guess.number_guess import Guess
-#from number_guess.entry_point.py import play_game
 import entry_point as entry_point
-#import *
 
 def test_setting_max_number():
     guess = Guess()
