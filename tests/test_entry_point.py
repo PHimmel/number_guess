@@ -32,8 +32,12 @@ def test_game_can_be_won(capsys, monkeypatch):
     # Start game with max number of 5
     number_inputs = StringIO('5\n5\n4\n3\n2\n1\n0\n')
     monkeypatch.setattr('sys.stdin', number_inputs)
-    
-    assert entry_point.play_game() == 0
+
+    game_status = entry_point.play_game();
+    capture = capsys.readouterr()
+
+    assert game_status == 0
+    assert "You won!" in capture.out
 
 def test_game_can_be_won_with_large_numbers(capsys, monkeypatch):
     # Start game with max number of 10000
@@ -47,4 +51,8 @@ def test_game_can_be_won_with_large_numbers(capsys, monkeypatch):
     number_inputs = StringIO(input_string)
     monkeypatch.setattr('sys.stdin', number_inputs)
 
-    assert entry_point.play_game() == 0
+    game_status = entry_point.play_game();
+    capture = capsys.readouterr()
+
+    assert game_status == 0
+    assert "You won!" in capture.out
